@@ -29,7 +29,7 @@
         import {eliminar_inicio} from './lib/lstSimpLig/index.js';
         import {eliminar_ultimo} from './lib/lstSimpLig/index.js';
         import {eliminar_x} from './lib/lstSimpLig/index.js';
-        import {eliminar_antes_x} from './lib/lstSimpLig/index.js';;
+        import {eliminar_antes_x} from './lib/lstSimpLig/index.js';
         import {eliminar_despues_x} from './lib/lstSimpLig/index.js';
         window.insertar_al_inicio=insertar_al_inicio;
         window.insertar_al_final=insertar_al_final;
@@ -49,7 +49,7 @@
         import {eliminar_inicio as eliminar_inicio_lstCirSimpLig} from './lib/lstCirSimpLig/index.js';
         import {eliminar_ultimo as eliminar_ultimo_lstCirSimpLig} from './lib/lstCirSimpLig/index.js';
         import {eliminar_x as eliminar_x_lstCirSimpLig} from './lib/lstCirSimpLig/index.js';
-        import {eliminar_antes_x as eliminar_antes_x_lstCirSimpLig} from './lib/lstCirSimpLig/index.js';;
+        import {eliminar_antes_x as eliminar_antes_x_lstCirSimpLig} from './lib/lstCirSimpLig/index.js';
         import {eliminar_despues_x as eliminar_despues_x_lstCirSimpLig} from './lib/lstCirSimpLig/index.js';
         window.insertar_al_inicio_lstCirSimpLig=insertar_al_inicio_lstCirSimpLig;
         window.insertar_al_final_lstCirSimpLig=insertar_al_final_lstCirSimpLig;
@@ -63,13 +63,23 @@
 
         //LISTA DOBLEMENTE LIGADA
         import {insertar_al_inicio as insertar_al_inicio_lstDobLig} from './lib/lstDobLig/index.js';
+        import {insertar_al_final as insertar_al_final_lstDobLig} from './lib/lstDobLig/index.js';
         import {insertar_antes_x as insertar_antes_x_lstDobLig} from './lib/lstDobLig/index.js';
-        import {elimina_inicio as elimina_inicio_lstDobLig} from './lib/lstDobLig/index.js';
         import {insertar_despues_x as insertar_despues_x_lstDobLig} from './lib/lstDobLig/index.js';
+        import {eliminar_inicio as elimina_inicio_lstDobLig} from './lib/lstDobLig/index.js';
+        import {eliminar_ultimo as eliminar_ultimo_lstDobLig} from './lib/lstDobLig/index.js';
+        import {eliminar_x as eliminar_x_lstDobLig} from './lib/lstDobLig/index.js';
+        import {eliminar_antes_x as eliminar_antes_x_lstDobLig} from './lib/lstDobLig/index.js';
+        import {eliminar_despues_x as eliminar_despues_x_lstDobLig} from './lib/lstDobLig/index.js';
         window.insertar_al_inicio_lstDobLig=insertar_al_inicio_lstDobLig;
+        window.insertar_al_final_lstDobLig=insertar_al_final_lstDobLig;
         window.insertar_antes_x_lstDobLig=insertar_antes_x_lstDobLig;
-        window.elimina_inicio_lstDobLig=elimina_inicio_lstDobLig;
         window.insertar_despues_x_lstDobLig=insertar_despues_x_lstDobLig;
+        window.eliminar_inicio_lstDobLig=elimina_inicio_lstDobLig;
+        window.eliminar_ultimo_lstDobLig=eliminar_ultimo_lstDobLig;
+        window.eliminar_x_lstDobLig=eliminar_x_lstDobLig;
+        window.eliminar_antes_x_lstDobLig=eliminar_antes_x_lstDobLig;
+        window.eliminar_despues_x_lstDobLig=eliminar_despues_x_lstDobLig;
 
 
         //EVENTOS DE MENU PARA MANEJAR HISTORIAL
@@ -89,56 +99,13 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRUPO 04 - EDD</title>
-    <style>
-        .lds-hourglass {
-            display: inline-block;
-            position: relative;
-            width: 80px;
-            height: 80px;
-        }
-        .lds-hourglass:after {
-            content: " ";
-            display: block;
-            border-radius: 50%;
-            width: 0;
-            height: 0;
-            margin: 8px;
-            box-sizing: border-box;
-            border: 32px solid rgb(0, 0, 0);
-            border-color: rgb(0, 0, 0) transparent rgb(0, 0, 0) transparent;
-            animation: lds-hourglass 3.0s infinite;
-        }
-        @keyframes lds-hourglass {
-            0% {
-                transform: rotate(0);
-                animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-            }
-            50% {
-                transform: rotate(900deg);
-                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            }
-            100% {
-                transform: rotate(1800deg);
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="lds-hourglass" ></div>  
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GRUPO 04 - EDD</title>
+    </head>
 </html>
-
-<body>
-
-
-    
-<div id="myModalSpin" class="modalSpin">
-</div>
 
 <div id="principal">
     
@@ -184,25 +151,20 @@
         <div class="container">
             <div class="row text-center">
                 <center>
-                <h1>▀▄▀▄▀▄   🎀  𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ  🎀   ▄▀▄▀▄▀</h1>
+                <h1>▀▄▀▄▀▄     𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ     ▄▀▄▀▄▀</h1>
                
                 <button onclick="insertar_al_inicio()"><span></span>𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ 𝔸𝕃 𝕀ℕ𝕀ℂ𝕀𝕆</button>
                 <button onclick="insertar_al_final()"><span></span>𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ 𝔸𝕃 𝔽𝕀ℕ𝔸𝕃</button>
                 <button onclick="inserta_antes_x()"><span></span>𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ 𝔸ℕ𝕋𝔼𝕊 𝔻𝔼 𝕏</button>
                 <button onclick="inserta_despues_x()"><span></span>𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ 𝔻𝔼𝕊ℙ𝕌𝔼𝕊 𝔻𝔼 𝕏 </button>
         
-                <h1>▀▄▀▄▀▄   🎀  𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ  🎀   ▄▀▄▀▄▀</h1>
+                <h1>▀▄▀▄▀▄     𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ     ▄▀▄▀▄▀</h1>
                 <button onclick="eliminar_inicio()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝔸𝕃 𝕀ℕ𝕀ℂ𝕀𝕆</button>
                 <button onclick="eliminar_ultimo()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝕌𝕃𝕋𝕀𝕄𝕆 ℕ𝕆𝔻𝕆</button>
                 <button onclick="eliminar_x()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝕏</button>
                 <button onclick="eliminar_antes_x()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝔸ℕ𝕋𝔼𝕊 𝔻𝔼 𝕏</button>
                 <button onclick="eliminar_despues_x()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝔻𝔼𝕊ℙ𝕌𝔼𝕊 𝔻𝔼 𝕏</button>
-          
-            </div>
-            <div class="row text-center">
-                <div class="col">
-                    <button onclick="window.history.back()">𝕄𝔼ℕ𝕌</button>
-                </div>
+                <button onclick="window.history.back()">𝕄𝔼ℕ𝕌</button>
             </div>
         </div>  
 
@@ -226,24 +188,19 @@
     <div  class="container">
         <div class="row text-center">
             <center>
-                <h1>▀▄▀▄▀▄   🎀  𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ  🎀   ▄▀▄▀▄▀</h1>
+                <h1>▀▄▀▄▀▄     𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ     ▄▀▄▀▄▀</h1>
                 <button onclick="insertar_al_inicio_lstCirSimpLig()">𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ 𝔸𝕃 𝕀ℕ𝕀ℂ𝕀𝕆</button>
                 <button onclick="insertar_al_final_lstCirSimpLig()">𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ 𝔸𝕃 𝔽𝕀ℕ𝔸𝕃</button>
                 <button onclick="inserta_antes_x_lstCirSimpLig()">𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ 𝔸ℕ𝕋𝔼𝕊 𝔻𝔼 𝕏</button> 
                 <button onclick="inserta_despues_x_lstCirSimpLig()">𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ 𝔻𝔼𝕊ℙ𝕌𝔼𝕊 𝔻𝔼 𝕏</button>
 
-                <h1>▀▄▀▄▀▄   🎀  𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ  🎀   ▄▀▄▀▄▀</h1>
+                <h1>▀▄▀▄▀▄     𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ     ▄▀▄▀▄▀</h1>
                 <button onclick="eliminar_inicio_lstCirSimpLig()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝔸𝕃 𝕀ℕ𝕀ℂ𝕀𝕆</button>
                 <button onclick="eliminar_ultimo_lstCirSimpLig()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝕌𝕃𝕋𝕀𝕄𝕆 ℕ𝕆𝔻𝕆</button>
                 <button onclick="eliminar_x_lstCirSimpLig()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝕏</button>
                 <button onclick="eliminar_antes_x_lstCirSimpLig()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝔸ℕ𝕋𝔼𝕊 𝔻𝔼 𝕏</button>
                 <button onclick="eliminar_despues_x_lstCirSimpLig()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝔻𝔼𝕊ℙ𝕌𝔼𝕊 𝔻𝔼 𝕏</button>
-         
-        </div>
-        <div class="row text-center">
-            <div class="col">
                 <button onclick="window.history.back()">𝕄𝔼ℕ𝕌</button>
-            </div>
         </div>
     </div>
 
@@ -253,7 +210,8 @@
     <div class="container">
         <div class="row text-center">
             <div class="col" style="margin-top:20px">
-                <h4>LISTA DOBLEMENTE LIGADA</h4> 
+                 
+                <font color="#000000 "><h4>𝕃𝕀𝕊𝕋𝔸 𝔻𝕆𝔹𝕃𝔼𝕄𝔼ℕ𝕋𝔼 𝕃𝕀𝔾𝔸𝔻𝔸</h4></font>
             </div>
         </div>
     </div>
@@ -264,25 +222,20 @@
 
     <div  class="container">
         <div class="row text-center">
-            <div class="col-xs-12 col-sm-12 col-md-6 ">
-                    <button onclick="insertar_al_inicio_lstDobLig()">INSERTAR AL INICIO</button>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6">
-                    <button onclick="insertar_despues_x_lstDobLig()">INSERTAR DESPUES DE X</button>
-            </div>
-        </div>
-        <div class="row text-center">
-                <div class="col-xs-12 col-sm-12 col-md-6">
-                    <button onclick="insertar_antes_x_lstDobLig()">INSERTAR ANTES DE X</button>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6">
-                    <button onclick="eliminar_inicio_lstDobLig()">ELIMINAR AL INICIO</button>
-                </div>
-        </div>
-        <div class="row text-center">
-            <div class="col">
-                <button onclick="window.history.back()">MENU</button>
-            </div>
+            <center>
+                <h1>▀▄▀▄▀▄     𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ     ▄▀▄▀▄▀</h1>
+                <button onclick="insertar_al_inicio_lstDobLig()">𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ 𝔸𝕃 𝕀ℕ𝕀ℂ𝕀𝕆</button>
+                <button onclick="insertar_al_final_lstDobLig()">𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ 𝔸𝕃 𝔽𝕀ℕ𝔸𝕃</button>
+                <button onclick="insertar_antes_x_lstDobLig()">𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ 𝔸ℕ𝕋𝔼𝕊 𝔻𝔼 𝕏</button> 
+                <button onclick="insertar_despues_x_lstDobLig()">𝕀ℕ𝕊𝔼ℝ𝕋𝔸ℝ 𝔻𝔼𝕊ℙ𝕌𝔼𝕊 𝔻𝔼 𝕏</button>
+
+                <h1>▀▄▀▄▀▄     𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ     ▄▀▄▀▄▀</h1>
+                <button onclick="eliminar_inicio_lstDobLig()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝔸𝕃 𝕀ℕ𝕀ℂ𝕀𝕆</button>
+                <button onclick="eliminar_ultimo_lstDobLig()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝕌𝕃𝕋𝕀𝕄𝕆 ℕ𝕆𝔻𝕆</button>
+                <button onclick="eliminar_x_lstDobLig()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝕏</button>
+                <button onclick="eliminar_antes_x_lstDobLig()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝔸ℕ𝕋𝔼𝕊 𝔻𝔼 𝕏</button>
+                <button onclick="eliminar_despues_x_lstDobLig()">𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ 𝔻𝔼𝕊ℙ𝕌𝔼𝕊 𝔻𝔼 𝕏</button>
+                <button onclick="window.history.back()">𝕄𝔼ℕ𝕌</button>
         </div>
     </div>
 

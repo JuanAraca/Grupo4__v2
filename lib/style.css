@@ -1,8 +1,8 @@
-canvas { border: 1px solid black;height:200px;width:100%;border-radius: 5px;padding: 10px; }
+canvas { border: 1px solid rgb(243, 238, 238);height:200px;width:100%;border-radius: 25px;padding: 10px; }
 .container button {
     width:150px;
-    margin:5px;
-    border-radius: 5px;
+    margin:25px;
+    border-radius: 10px;
 }
 #principal button{
     width:150px;
@@ -25,35 +25,6 @@ canvas { border: 1px solid black;height:200px;width:100%;border-radius: 5px;padd
     .buttoncentermenu{
         text-align: center;
     }
-}
-.modalSpin {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000000; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.1); /* Black w/ opacity */
-  }
-/*
-div[class="row"] {
-    outline: 1px dotted rgba(255, 0, 0, 1);
-}
-
-div[class^="col-"] {
-    background-color: rgba(255, 0, 0, 0.2);
-    outline: 1px dotted rgba(0, 0, 0, 0.5);
-}
-*/
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;  
 }
 
 body{
@@ -106,8 +77,8 @@ button:hover{
 h4{
     margin: 0 50px;
     position: relative;
-    padding: 10px 20px;
-    border: 2px solid #0d0e0e;
+    padding: 10px;
+    border: 2px solid #ebf3f3;
     background-color:transparent;
     color:rgb(16, 211, 146) rgba(95, 223, 112, 0.4);
     text-transform: uppercase;
@@ -116,11 +87,15 @@ h4{
     overflow: hidden;
     transition: .3s;
 }
+/*principal 
+*/
 h1{
     margin: 0 50px;
     position: relative;
-    padding: 10px 20px;
-    border: 2px solid #070a0a;
+    border-radius: 25px;
+    padding: 10px;
+   
+    border: 2px solid #edf5f5;
     background-color:transparent;
     color:rgb(16, 211, 146) rgba(95, 223, 112, 0.4);
     text-transform: uppercase;
@@ -134,7 +109,7 @@ h1{
 
   body {
     
-    background-image: url("http://www.solofondos.com/wp-content/uploads/2015/11/21omxpw.jpg");
+    background-image: url("https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500p://www.solofondos.com/wp-content/uploads/2015/11/21omxpw.jpg");
     
   }
 
